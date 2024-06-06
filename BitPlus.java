@@ -8,7 +8,7 @@ public class BitPlus {
         while (t-- > 0) {
             String str = sc.next();
 
-            helper(str,x);
+            x = helper(str,x);
         }
         System.out.println(x);
         sc.close();
@@ -16,13 +16,14 @@ public class BitPlus {
     public static int helper(String str,int x){
         switch (str) {
             case "++X":
-                return ++x;
+                    return x = x+1;
             case "X++":
-                return x++;
+                    return x = x+1;
             case "--X":
-                return --x;        
+                    return x = x-1;  
             default:
-                return x--;
+                    return x = x-1;
         }
+        
     }
 }
